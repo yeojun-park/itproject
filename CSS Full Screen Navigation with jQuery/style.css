@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.heading {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    position: relative;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    background: crimson;
+    padding: 5px 20px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.main-preview {
+    height: 100vh;
+}
+.main-preview div {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    box-sizing: border-box;
+}
+.main-preview div:first-child {
+    background-image: linear-gradient(to right bottom, #f093fb 0%, #f5576c 100%);
+    position: relative;
+}
+.main-preview div:last-child {
+    background: url(images/back-museum.jpg) no-repeat center center / cover;
+}
+span.enter {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+span.enter h1 {
+    color: #fff;
+    font-size: 120px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 100px;
+}
+span.enter h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.04em;
+    transform-origin: bottom;
+    transform: rotateX(180deg);
+
+    background: linear-gradient(to top, #fff 0%, transparent 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.5;
+}
+
+span.enter a {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+.logo-section {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #fcfcfc;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+.logo-section div {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.logo-section div img {
+    border: 10px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
+}
+.logo-section div img:first-child {
+    width: 450px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+}
+.logo-section div img:last-child {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}
+
+.menu-section {
+    height: 100%;
+    width: 50%;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: 50%;
+}
+.menu-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10%;
+}
+.menu-section ul li a {
+    font-size: 80px;
+    line-height: 100px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    color: #000;    
+}
+.menu-section ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 0;
+    height: 41%;
+    background-color: orangered;
+    z-index: -1;
+    transition: 0.5s;
+}
+.menu-section ul li a:hover:before {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    color: #fff;
+    background-color: #000;
+    width: 80px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 26px;
+    
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+}
+.close-menu {
+    left: 100%;
+}
+

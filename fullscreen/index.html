@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>フルスクリーン背景</title>
+	<link rel="icon" href="images/favicon.png">
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/vegas.min.css">
+	<!--js-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/vegas.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1><a href="./" class="logo">artistic</a></h1>
+		</header>
+		<main>
+
+		</main>
+
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="art-index.html">pure css image accordion silder</a></li>
+					<li><a href="fullscreen-index.html">CSS Full Screen Navigation with jQuery</a></li>
+					<li><a href="gradient-index.html">Gradient Text Navigation</a></li>
+					<li><a href="">ページ4</a></li>
+					<li><a href="">ページ5</a></li>
+				</ul>
+			</nav>
+			<p>&copy; Sample. All Rights Reserved.</p>
+		</footer>
+	</div>
+	<!--wrapper-->
+	<script>
+		$(function() {
+		$('body').vegas({ //背景画像でスライドショーしたい場所の設定
+			slides: [{
+					src: 'images/artistic-image-01.jpg'
+				}, //スライドする画像を配列で設定
+				{
+					src: 'images/artistic-image-02.jpg'
+				},
+				{
+					src: 'images/artistic-image-03.jpg'
+				},
+				{
+					src: 'images/artistic-image-04.jpg'
+				},
+					 				{
+					src: 'images/artistic-image-05.jpg'
+				},
+					 				{
+					src: 'images/artistic-image-06.jpg'
+				},
+			],
+			delay: 5000,
+			timer: true,
+			overlay: 'images/01.png',
+			animation: 'random',
+			transition: 'blur',
+			transitionDuration: 1000
+		});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Full Screen Navigation with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="fullscreen-style.css">
+</head>
+<body>
+   
+   <h1 class="heading">CSS Full Screen Navigation with jQuery</h1>
+   
+   <div class="open-menu">
+       <i class="fa fa-bars" aria-hidden="true"></i>
+   </div>
+   <div class="close-menu">
+       <i class="fa fa-times" aria-hidden="true"></i>
+   </div>
+   <div class="main-preview">
+       <div>
+           <span class="enter">
+               <h1 data-text="creation">creation</h1>
+               <a href="">enterance</a>
+           </span>
+       </div>
+       <div></div>
+   </div>
+   <div class="main">
+       <div class="logo-section">
+           <div>
+               <img src="images/photo-01.jpg">
+               <img src="images/photo-02.jpg">
+           </div>
+       </div>
+       <div class="menu-section">
+           <ul>
+               <li><a href="">history</a></li>
+               <li><a href="">exhibition</a></li>
+               <li><a href="">event</a></li>
+           </ul>
+       </div>
+   </div>
+   
+   <script>
+       $(function(){
+          $('.open-menu').click(function(){
+              $('.main-preview').fadeOut(500);
+              $('.main').fadeIn(500);
+              $(this).animate({left:'-80px'});
+              $('.close-menu').animate({left:'96%'});
+              $('.menu-section ul').animate({left:'-1%'});
+          });
+           $('.close-menu').click(function(){
+               $('.main-preview').fadeIn(500);
+              $('.main').fadeOut(500);
+              $(this).animate({left:'100%'});
+              $('.open-menu').animate({left:'0'});
+               $('.menu-section ul').animate({left:'-10%'});
+          });
+       });
+   </script>
+    
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Web Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Font Awesome ver.4.7 CDN */
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Playfair Display';
+	background: url(images/bg-main.jpg) no-repeat fixed center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+.heading {
+	font-weight: normal;
+	position: relative;
+	color: #fff;
+	font-size: 30px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	margin: 0;
+	background: crimson;
+	padding: 5px 20px;
+	border-radius: 5px;
+}
+
+.toggle {
+	font-family: 'Roboto';
+	width: 50px;
+	height: 50px;
+	background: #000;
+	border-radius: 50%;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 1;
+	overflow: hidden;
+}
+.toggle:before {
+	content: '+';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 50px;
+	text-align: center;
+	transition: .5s;
+}
+.toggle.active:before {
+	transform: rotate(360deg);
+	background: yellowgreen;
+}
+
+.overlay {
+	width: 50px;
+	height: 50px;
+	background: #000;
+	border-radius: 50%;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: rgba(0, 0, 0, 0.9);
+	transition: .5s;
+}
+.overlay.active {
+	transform: scale(100,100);
+}
+
+.menu {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s;
+}
+.menu.active {
+	visibility: visible;
+	opacity: 1;
+}
+.menu ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+	padding: 0;
+}
+.menu ul li {
+	list-style: none;
+}
+.menu ul li a {
+	text-transform: capitalize;
+	text-decoration: none;
+	position: relative;
+	font-size: 58px;
+	color: #fff;
+	display: inline-block;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.menu ul li a:before {
+	content: '';
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	background-color: yellowgreen;
+	z-index: -1;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .5s;
+}
+.menu ul li a:hover:before {
+	transform: scaleX(1.2);
+}
